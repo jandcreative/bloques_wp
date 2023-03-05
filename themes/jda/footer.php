@@ -16,7 +16,7 @@
 
 			<div class="logo-footer text-center">
 
-				<img src="<?php the_field('logo_flyingcatmarketing_white', 'options');?>">
+				
 
 			</div>
 
