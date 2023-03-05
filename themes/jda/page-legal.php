@@ -1,22 +1,39 @@
+<?php 
+/* Template Name: Content - Legal */ 
+/* Template Post Type: post, page, product */
+?>	
 
 <?php get_header(); ?>
 
 
 	<div id="page-wrapper">
 
-	<?php the_content();?>
+		<?php while(have_posts()): the_post(); ?>
 
+	    <section id="legal" class="legal">
+
+
+		    <div class="container">
+				<h1 class="entry-title">
+					<?php the_title();?>	
+				</h1>
+					
+					
+				<div class="content">
+				<?php the_content();?>					
+				</div>
+
+			</div>
+
+		</section>
+
+		<?php endwhile; ?>
 
 	</div>
-	
-	<?php get_footer(); ?>
-		
-	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-	<script src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/js/buddy_animation.js"></script>
-	<script src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/js/owl.carousel.min.js" type="text/javascript"></script>
-	<script src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/js/testimonial.js" type="text/javascript"></script>		
 
-  <script type="text/javascript">
+	<?php get_footer(); ?>
+	
+	 <script type="text/javascript">
 
       // Scrolling Effect
 

@@ -24,6 +24,10 @@ if ( ! function_exists( 'jda_support' ) ) :
 		// Add support for block styles.
 		add_theme_support( 'wp-block-styles' );
 
+		add_theme_support( 'post-formats',  array( 'aside', 'gallery', 'quote', 'image', 'video' ) );
+
+		add_theme_support( 'post-thumbnails' );
+
 		// Enqueue editor styles.
 		add_editor_style( 'style.css' );
 
@@ -34,6 +38,8 @@ if ( ! function_exists( 'jda_support' ) ) :
 	}
 
 endif;
+
+
 
 add_action( 'after_setup_theme', 'jda_support' );
 
